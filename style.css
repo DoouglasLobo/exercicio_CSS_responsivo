@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    /* Linha embaixo dos títulos */
+    padding-bottom: 0.5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: left;
+    color: #fff;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #333;
+    /* Cor de fundo do header */
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho ul {
+    list-style: none;
+}
+
+.cabecalho ul li {
+    display: inline;
+    padding: 1rem;
+}
+
+.cabecalho ul a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* Seção "Sobre a Loja" */
+.sobre-loja {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.sobre-loja .imagem-loja img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Seção "Produtos" */
+.produtos {
+    padding: 2rem;
+    text-align: left;
+}
+
+.lista-produtos {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produto {
+    flex: 1 1 200px;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.produto h3 {
+    margin: 8px;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+}
+
+/* Layout para Tablets */
+@media (max-width: 1023px) and (min-width: 641px) {
+    .sobre-loja {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .lista-produtos {
+        gap: 1.5rem;
+    }
+
+    .produto {
+        max-width: 220px;
+    }
+}
+
+/* Layout para Mobile */
+@media (max-width: 640px) {
+    .sobre-loja {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .produtos {
+        padding: 1rem;
+    }
+
+    .lista-produtos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .produto {
+        max-width: 100%;
+    }
+}
